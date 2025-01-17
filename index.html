@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma Ruslan Yahilovych</title>
+    <style>
+        /* Основний стиль сторінки */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .contact-top {
+            text-align: center;
+            padding: 10px;
+            background-color: #3A8B41;
+            font-size: 14px;
+            color: white;
+        }
+
+        .contact-top p {
+            margin: 5px 0;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-container label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+
+        .main-container {
+            display: none;
+            padding: 20px;
+        }
+
+        .services, .reviews {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .services h2, .reviews h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .services .service-item {
+            margin-bottom: 40px;
+        }
+
+        .services .service-item h3 {
+            font-size: 20px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .services .service-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            max-height: 300px; /* Зменшений розмір */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .slider {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 8px;
+            max-height: 300px; /* Зменшений розмір */
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        #reviewsList {
+            margin: 20px 0;
+        }
+
+        #reviewsList div {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #reviewForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        #reviewForm button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #reviewForm button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contact-top">
+            <p>☎ Telefon: +49 123 456 789</p>
+            <p>✉ E-Mail: info@firma-yahilovych.de</p>
+        </div>
+        <h1>Firma Ruslan Yahilovych</h1>
+    </header>
+
+    <div class="login-container" id="loginContainer">
+        <form id="loginForm">
+            <h2>Willkommen!</h2>
+            <label for="username">Benutzername:</label>
+            <input type="text" id="username" placeholder="Benutzername eingeben" required>
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" placeholder="Passwort eingeben" required>
+            <button type="submit">Einloggen</button>
+        </form>
+    </div>
+
+    <div class="main-container" id="mainContainer">
+        <section class="services">
+            <h2>Unsere Dienstleistungen</h2>
+
+            <div class="service-item">
+                <h3>Komplette und individuelle Elektroinstallationen</h3>
+                <img src="./1.jpeg" alt="Elektroinstallationen">
+            </div>
+
+            <div class="service-item">
+                <h3>Austausch und Modernisierung von Elektroschränken</h3>
+                <img src="./2.jpeg" alt="Elektroschränke">
+            </div>
+
+            <div class="service-item">
+                <h3>Installation von Solarmodulen mit Speichersystemen</h3>
+                <img src="./3.jpeg" alt="Solarmodule">
+            </div>
+
+            <div class="service-item">
+                <h3>Wandrenovierungen und Malerarbeiten</h3>
+                <img src="./4.jpeg" alt="Wandrenovierungen">
+            </div>
+
+            <div class="service-item">
+                <h3>Verlegen von Fliesen</h3>
+                <img src="./5.jpeg" alt="Fliesen">
+            </div>
+        </section>
+
+        <section class="slider">
+            <h2>Bildergalerie</h2>
+            <div class="slider-container">
+                <div class="slide active"><img src="./6.jpg" alt="Bild 1"></div>
+                <div class="slide"><img src="./7.jpg" alt="Bild 2"></div>
+                <div class="slide"><img src="./8.jpg" alt="Bild 3"></div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <h2>Bewertungen</h2>
+            <div id="reviewsList"></div>
+            <form id="reviewForm">
+                <textarea id="reviewText" placeholder="Fügen Sie Ihre Bewertung hinzu..." required></textarea>
+                <button type="submit">Bewertung abgeben</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>☎ Telefon: +49 123 456 789</p>
+        <p>✉ E-Mail: info@firma-yahilovych.de</p>
+    </footer>
+
+    <script>
+        // Показ основного контейнера після входу
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            document.getElementById('loginContainer').style.display = 'none';
+            document.getElementById('mainContainer').style.display = 'block';
+        });
+
+        // Слайдер
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        setInterval(nextSlide, 3000);
+
+        // Додавання відгуків
+        document.getElementById('reviewForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const reviewText = document.getElementById('reviewText').value;
+            const reviewList = document.getElementById('reviewsList');
+
+            const reviewItem = document.createElement('div');
+            reviewItem.textContent = reviewText;
+            reviewList.appendChild(reviewItem);
+
+            document.getElementById('reviewText').value = '';
+        });
+    </script>
+</body>
+</html>
